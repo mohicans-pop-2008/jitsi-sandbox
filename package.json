@@ -1,0 +1,15 @@
+{
+  "name": "jitsi-sandbox",
+  "version": "0.1.0",
+  "description": "getting up and running with lib-jitsi-meet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-fs:mohicans-pop-2008/jitsi-sandbox.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
