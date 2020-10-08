@@ -9,7 +9,11 @@ JitsiMeetJS.init(); // how do we know this ran?
 //   useNicks: false,
 // };
 
+console.log('connectionConfig', config)
 // appId=null, token=null, options
+// setting a serviceUrl on our config and specifying the use of wss instead
+// of bosh seems to make all the red stuff go away
+config.serviceUrl = config.websocket || config.bosh
 const connection = new JitsiMeetJS.JitsiConnection(null, undefined, config);
 
 // provide a way for us to know if a connection is established,
