@@ -13,6 +13,7 @@ async function jitsiInit() {
   // setting a serviceUrl on our config and specifying the use of wss instead
   // of bosh seems to make all the red stuff go away
   config.serviceUrl = config.websocket || config.bosh;
+  config.serviceUrl += '?room=some-default-room';
 
   /* CONNECTION EVENT HANDLERS */
   // provide a way for us to know if a connection is established,
