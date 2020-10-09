@@ -9,7 +9,7 @@ We are able to start meetings on meet.jit.si servers from an app on our local co
 
 ## Minimum Viable Product
 
-### Milestone 1 : Code Review : Proof of Concept : DUE 10/12/2020
+### Milestone 1 : Code Review : Proof of Concept : DUE 10/12/2020 15:00 EST
 
 Before Monday code review we want:
 
