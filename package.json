@@ -4,6 +4,7 @@
   "description": "getting up and running with lib-jitsi-meet",
   "main": "index.js",
   "scripts": {
+    "start": "live-server --ignore=.git,node_modules ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,5 +12,8 @@
     "url": "git@github.com-fs:mohicans-pop-2008/jitsi-sandbox.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
