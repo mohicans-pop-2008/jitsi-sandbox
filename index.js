@@ -1,12 +1,21 @@
+/* global config */
 async function jitsiInit() {
+  /* INITIALIZE */
+  // what? I don't know!
   JitsiMeetJS.init(); // how do we know this ran?
 
+  /* CONFIG */
+  // what? no clue!
+  // well... serviceUrl is important. See https://meet.jit.si/config.js
+  // for a full config object.
   console.log('connectionConfig', config)
   // appId=null, token=null, options
   // setting a serviceUrl on our config and specifying the use of wss instead
   // of bosh seems to make all the red stuff go away
   config.serviceUrl = config.websocket || config.bosh
 
+  /* ESTABLISH CONNECTION */
+  // JitsiConnection(appId=null, token=undefined, options)
   const connection = new JitsiMeetJS.JitsiConnection(null, undefined, config);
 
   // provide a way for us to know if a connection is established,
@@ -21,6 +30,7 @@ async function jitsiInit() {
     console.log('Connection Failed!')
   }
 
+  /* CONNECTION EVENT HANDLERS */
   connection.addEventListener(
     JitsiMeetJS.events.connection.CONNECTION_ESTABLISHED,
     onConnectionSuccess
@@ -43,5 +53,6 @@ async function jitsiInit() {
 
 jitsiInit()
 
+/* DEBUG helpers */
 const app = document.getElementById('app');
 console.log('We got the app div -->', app);
