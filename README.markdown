@@ -35,15 +35,30 @@ Before Monday code review we want:
 #### Task Breakdown
 
 *Components*
-- [ ] Video window
+
 - [ ] Audio track component
-- [ ] Screen share window
 - [ ] UI Container
+  - [ ] Main content window
+    - [ ] Video window gallery mode
+    - [ ] Screen share window
   - [ ] Meeting controls bottom bar
-  - [ ] Screen share button
-  - [ ] Mute/Unmute button
-  - [ ] Video On/Off button
-  - [ ] Raise/lower hand button
+    - [ ] Screen share button
+    - [ ] Mute/Unmute button
+    - [ ] Video On/Off button
+    - [ ] Raise/lower hand button
+  - [ ] Icons side bar
+    - [ ] Engagement score icon
+    - [ ] Hands raised icon
+
+*State*
+
+- [ ] Use boilermaker scaffolding
+- [ ] Hand raise behavior
+- [ ] Hand raise counter
+- [ ] Video Mute behavior
+- [ ] Audio Mute behavior
+- [ ] Screen share and gallery mode toggle
+- [ ] Engagement score counter
 
 ### Milestone 2 : Beta : DUE 10/16/2020
 
