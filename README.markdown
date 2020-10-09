@@ -28,8 +28,9 @@ Before Monday code review we want:
 - [ ] Other users in the same conference should be able to see the screen that is being shared.
 
 #### Feedback
-- [ ] A user should be able to raise AND lower their hand.
-- [ ] All users should be able to see an icon with number of raised hands when hands our raised.
+- [ ] The presenter should be able to see an icon (i.e. Engagement score) that reflects number of audience member cameras on.
+- [ ] (OPTIONAL: A user should be able to raise AND lower their hand.)
+- [ ] (OPTIONAL: All users should be able to see an icon with number of raised hands when hands our raised.)
 
 ### Milestone 2 : Beta : DUE 10/16/2020
 
