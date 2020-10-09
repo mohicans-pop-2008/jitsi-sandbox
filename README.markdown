@@ -32,6 +32,19 @@ Before Monday code review we want:
 - [ ] (OPTIONAL: A user should be able to raise AND lower their hand.)
 - [ ] (OPTIONAL: All users should be able to see an icon with number of raised hands when hands our raised.)
 
+#### Task Breakdown
+
+*Components*
+- [ ] Video window
+- [ ] Audio track component
+- [ ] Screen share window
+- [ ] UI Container
+  - [ ] Meeting controls bottom bar
+  - [ ] Screen share button
+  - [ ] Mute/Unmute button
+  - [ ] Video On/Off button
+  - [ ] Raise/lower hand button
+
 ### Milestone 2 : Beta : DUE 10/16/2020
 
 ### Milestone 3 : Code Review : DUE 10/19/2020
