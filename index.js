@@ -21,6 +21,7 @@ async function jitsiInit() {
   const onConnectionSuccess = () => {
     console.log("Connection Established!");
     conference = connection.initJitsiConference("some-default-room", {});
+    console.log("LET'S HAVE A LOOK AT THE CONFERENCE", conference)
     conference.on(
       JitsiMeetJS.events.conference.CONFERENCE_JOINED,
       onConferenceJoined
@@ -35,8 +36,17 @@ async function jitsiInit() {
   // connection.addEventListener(JitsiMeetJS.events.connection.CONNECTION_DISCONNECTED, disconnect);
 
   /* CONFERENCE EVENT HANDLERS */
-  const onConferenceJoined = () => {
+  const onConferenceJoined = async () => {
     console.log("onConferenceJoined ==========Conference Joined!==========");
+    const localTracks = await JitsiMeetJS.createLocalTracks({ devices: ['video'], facingMode: 'user' }, true)
+    await conference.addTrack(localTracks[0])
+    videoTracks.push(localTracks[0])
+    const app = document.getElementById("app");
+    const myVideo = document.createElement("video")
+    myVideo.width=250
+    myVideo.autoplay='1'
+    localTracks[0].attach(myVideo)
+    app.appendChild(myVideo)
   };
 
   /* ESTABLISH CONNECTION */
@@ -56,12 +66,8 @@ async function jitsiInit() {
 
   await connection.connect(); // CONNECT!!!!
 
-  //ASYNCHRONOUS!
-  // const localTracks = await JitsiMeetJS.createLocalTracks({ devices: ['video', 'audio'], facingMode: 'user' }, true)
 }
 
+const videoTracks = []
 jitsiInit();
-
 /* DEBUG helpers */
-const app = document.getElementById("app");
-console.log("We got the app div -->", app);
